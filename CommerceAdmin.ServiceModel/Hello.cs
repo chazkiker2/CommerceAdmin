@@ -1,5 +1,6 @@
 using ServiceStack;
 
+
 namespace CommerceAdmin.ServiceModel
 {
     [Route("/hello")]

@@ -13,7 +13,7 @@ namespace CommerceAdmin
     {
         public void Configure(IWebHostBuilder builder) => builder
             .ConfigureServices(
-                services =>
+                _ =>
                 {
                     // Configure ASP.NET Core IOC Dependencies
                 }
@@ -36,7 +36,7 @@ namespace CommerceAdmin
             Plugins.Add(
                 new SharpPagesFeature
                 {
-                    EnableSpaFallback = true
+                    EnableSpaFallback = true,
                 }
             );
 

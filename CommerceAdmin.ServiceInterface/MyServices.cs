@@ -1,14 +1,14 @@
-using System;
-using ServiceStack;
 using CommerceAdmin.ServiceModel;
+using ServiceStack;
+
 
 namespace CommerceAdmin.ServiceInterface
 {
     public class MyServices : Service
     {
-        public object Any(Hello request)
+        public static object Any(Hello request)
         {
-            return new HelloResponse { Result = $"Hello, {request.Name}!" };
+            return new HelloResponse {Result = $"Hello, {request.Name}!"};
         }
     }
 }

@@ -49,7 +49,7 @@ namespace CommerceAdmin
         public void Configure(IWebHostBuilder builder) => builder
             .ConfigureServices(
                 services => services.AddSingleton<IAuthRepository>(
-                    c =>
+                    _ =>
                         new InMemoryAuthRepository<AppUser, UserAuthDetails>()
                 )
             )

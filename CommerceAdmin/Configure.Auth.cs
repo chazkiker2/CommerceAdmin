@@ -36,7 +36,9 @@ namespace CommerceAdmin
             .ConfigureServices(
                 services =>
                 {
-                    services.AddSingleton<ICacheClient>(new MemoryCacheClient()); //Store User Sessions in Memory Cache (default)
+                    services.AddSingleton<ICacheClient>(
+                        new MemoryCacheClient()
+                    ); //Store User Sessions in Memory Cache (default)
                 }
             )
             .ConfigureAppHost(
