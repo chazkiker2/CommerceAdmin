@@ -15,9 +15,9 @@ namespace CommerceAdmin
     public class CustomUserSession : AuthUserSession { }
 
     // Custom Validator to add custom validators to built-in /register Service requiring DisplayName and ConfirmPassword
-    public abstract class CustomRegistrationValidator : RegistrationValidator
+    public class CustomRegistrationValidator : RegistrationValidator
     {
-        protected CustomRegistrationValidator()
+        public CustomRegistrationValidator()
         {
             RuleSet(
                 ApplyTo.Post,
